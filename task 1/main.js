@@ -27,5 +27,7 @@ const part2 = () => {
   }
 };
 
+// 7:57pm - 8:19pm , Theo Clapperton
+
 console.log(part2());
 console.log(part1());
