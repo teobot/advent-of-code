@@ -2,77 +2,77 @@
 
 ## Days
 - [x] Task 1
-  - [x] Problem 1
-  - [x] Problem 2
+  - [x] Part 1
+  - [x] Part 2
 - [ ] Task 2
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 3
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 4
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 5
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 6
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 7
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 8
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 9
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 10
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 11
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 12
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 13
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 14
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 15
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 16
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 17
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 18
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 19
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 20
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 21
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 22
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 23
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 24
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
 - [ ] Task 25
-  - [ ] Problem 1
-  - [ ] Problem 2
+  - [ ] Part 1
+  - [ ] Part 2
