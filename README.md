@@ -1,78 +1,78 @@
 # Advent of code 2018
 
 ## Days
-- [x] Challenge 1
-  - [x] Task 1
-  - [x] Task 2
-- [ ] Challenge 2
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 3
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 4
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 5
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 6
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 7
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 8
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 9
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 10
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 11
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 12
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 13
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 14
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 15
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 16
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 17
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 18
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 19
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 20
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 21
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 22
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 23
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 24
-  - [ ] Task 1
-  - [ ] Task 2
-- [ ] Challenge 25
-  - [ ] Task 1
-  - [ ] Task 2
+- [x] Task 1
+  - [x] Problem 1
+  - [x] Problem 2
+- [ ] Task 2
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 3
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 4
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 5
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 6
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 7
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 8
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 9
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 10
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 11
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 12
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 13
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 14
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 15
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 16
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 17
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 18
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 19
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 20
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 21
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 22
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 23
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 24
+  - [ ] Problem 1
+  - [ ] Problem 2
+- [ ] Task 25
+  - [ ] Problem 1
+  - [ ] Problem 2
