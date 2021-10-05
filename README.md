@@ -1,6 +1,92 @@
-# Advent of code 2018
+# Advent of code
 
-## Days
+## File Boilerplate
+```
+const { inputToArray } = require("../../common/common");
+
+const inputs = inputToArray("../YEAR/task NUMBER/input.txt", "SEPARATOR");
+```
+
+# Years
+## 2016
+### Days
+- [ ] Task 1
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 2
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 3
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 4
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 5
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 6
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 7
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 8
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 9
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 10
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 11
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 12
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 13
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 14
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 15
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 16
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 17
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 18
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 19
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 20
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 21
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 22
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 23
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 24
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Task 25
+  - [ ] Part 1
+  - [ ] Part 2
+## 2018
+### Days
 - [x] Task 1
   - [x] Part 1
   - [x] Part 2
