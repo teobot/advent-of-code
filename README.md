@@ -10,9 +10,9 @@ const inputs = inputToArray("../YEAR/task NUMBER/input.txt", "SEPARATOR");
 # Years
 ## 2016
 ### Days
-- [ ] Task 1
-  - [ ] Part 1
-  - [ ] Part 2
+- [x] Task 1
+  - [x] Part 1
+  - [x] Part 2
 - [ ] Task 2
   - [ ] Part 1
   - [ ] Part 2
