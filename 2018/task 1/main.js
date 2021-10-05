@@ -1,6 +1,6 @@
-const { inputToArray } = require("../common/common");
+const { inputToArray } = require("../../common/common");
 
-const inputs = inputToArray("../task 1/input.txt", "\r\n");
+const inputs = inputToArray("../2018/task 1/input.txt", "\r\n");
 
 // PART 1
 const part1 = () => {
