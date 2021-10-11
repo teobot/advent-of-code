@@ -15,7 +15,7 @@ const inputs = inputToArray("../YEAR/task NUMBER/input.txt", "SEPARATOR");
 | Task  | Part 1 Complete | Part 2 Complete | Date Completed |
 | :---: | :-------------: | :-------------: | :------------: |
 |   1   |     :star:      |     :star:      |   05/10/2021   |
-|   2   |     :star:      |     :star:      |  11/101/2021   |
+|   2   |     :star:      |     :star:      |   11/10/2021   |
 
 ## 2017
 | Task  | Part 1 Complete | Part 2 Complete | Date Completed |
