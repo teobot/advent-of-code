@@ -58,7 +58,7 @@
 |                   Task                   | Part 1 Complete | Part 2 Complete | Date Completed |
 | :--------------------------------------: | :-------------: | :-------------: | :------------: |
 | [1](https://adventofcode.com/2016/day/1) |     :star:      |     :star:      |   05/10/2021   |
-| [2](https://adventofcode.com/2016/day/2) |   :new_moon:    |   :new_moon:    |      NaN       |
+| [2](https://adventofcode.com/2016/day/2) |     :star:      |     :star:      |   11/10/2021   |
 <!-- ---------------------------------------------------------------------------------------- -->
 
 
@@ -66,7 +66,7 @@
 |                   Task                   | Part 1 Complete | Part 2 Complete | Date Completed |
 | :--------------------------------------: | :-------------: | :-------------: | :------------: |
 | [1](https://adventofcode.com/2015/day/1) |     :star:      |     :star:      |      NaN       |
-| [2](https://adventofcode.com/2015/day/2) |     :star:      |   :new_moon:    |      NaN       |
+| [2](https://adventofcode.com/2015/day/2) |     :star:      |     :star:      |   11/10/2021   |
 | [3](https://adventofcode.com/2015/day/3) |     :star:      |     :star:      |      NaN       |
 | [4](https://adventofcode.com/2015/day/4) |     :star:      |   :new_moon:    |      NaN       |
 | [5](https://adventofcode.com/2015/day/5) |     :star:      |   :new_moon:    |      NaN       |
