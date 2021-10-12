@@ -34,7 +34,7 @@
 ## [2019](https://adventofcode.com/2019)
 |                   Task                   | Part 1 Complete | Part 2 Complete | Date Completed |                                        View Code                                         |
 | :--------------------------------------: | :-------------: | :-------------: | :------------: | :--------------------------------------------------------------------------------------: |
-| [1](https://adventofcode.com/2019/day/1) |     :star:      |     :star:      |   05/10/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2019/task%201) |
+| [1](https://adventofcode.com/2019/day/1) |     :star:      |     :star:      |   NaN   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2019/task%201) |
 | [2](https://adventofcode.com/2019/day/2) |     :star:      |     :star:      |      NaN       | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2019/task%202) |
 <!-- ---------------------------------------------------------------------------------------- -->
 
