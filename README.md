@@ -67,7 +67,7 @@
 | :--------------------------------------: | :----: | :----: | :------------: | :--------------------------------------------------------------------------------------: |
 | [1](https://adventofcode.com/2016/day/1) | :star: | :star: |   05/10/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2016/task%202) |
 | [2](https://adventofcode.com/2016/day/2) | :star: | :star: |   11/10/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2016/task%202) |
-| [3](https://adventofcode.com/2016/day/3) |  :x:   |  :x:   |      NaN       | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2016/task%203) |
+| [3](https://adventofcode.com/2016/day/3) | :star: | :star: |   25/10/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2016/task%203) |
 
 <!-- ---------------------------------------------------------------------------------------- -->
 
