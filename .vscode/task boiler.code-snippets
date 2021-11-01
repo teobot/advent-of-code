@@ -10,6 +10,8 @@
     "prefix": "advent of code task",
     "body": [
       "// Advent of code ${1:year} -- Filename : $TM_FILENAME",
+      "// Task link -- https://adventofcode.com/${1:Event Year}/day/${2:Task Number}",
+      "// Github link -- https://github.com/teobot/advent-of-code/tree/main/$1/task%20$2",
       "// Created by Theo Clapperton",
       "// Started @ $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
       "",
