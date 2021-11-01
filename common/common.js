@@ -46,8 +46,13 @@ const tests = (tests) => {
   `);
 };
 
+const inputToString = (filename) => {
+  return returnInput(filename);
+}
+
 module.exports = {
   inputToArray,
   inputToIntArray,
   tests,
+  inputToString
 };
