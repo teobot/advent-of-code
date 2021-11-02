@@ -2,7 +2,7 @@
 // Created by Theo Clapperton
 // Started @ 2021-11-01 11:12:50
 // Finished @ 2021-11-01 12:26:11
-// Time Taken = hour, 13 minutes and 21 seconds
+// Time Taken = 1 hour, 13 minutes and 21 seconds
 
 const { inputToString } = require("../../common/common");
 
