@@ -1,13 +1,19 @@
-# :christmas_tree: :computer: Advent of code :computer: :christmas_tree:
-> [Advent of Code website](https://adventofcode.com/2021/events)
+<h1 align="center">:christmas_tree: :computer: Advent of code :computer: :christmas_tree:</h1>
+
+<p align="center">
+	<strong>
+		<a href="https://www.linkedin.com/in/theoclapperton/">My Linkedin</a>
+		•
+    <a href="https://adventofcode.com/2021/events">Advent of Code</a>
+    •
+		<a href="https://github.com/teobot">My Github</a>
+	</strong>
+</p>
 
 <img src="https://media.giphy.com/media/l0HlGmv4WqldO9c5y/giphy.gif" width="100%" />
 
-
 ## Table of Contents
 
-- [:christmas_tree: :computer: Advent of code :computer: :christmas_tree:](#christmas_tree-computer-advent-of-code-computer-christmas_tree)
-  - [Table of Contents](#table-of-contents)
 - [Events](#events)
   - [2021](#2021)
   - [2020](#2020)
