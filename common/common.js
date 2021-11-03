@@ -50,9 +50,13 @@ const inputToString = (filename) => {
   return returnInput(filename);
 }
 
+function isOdd(num) { return num % 2;}
+
+
 module.exports = {
   inputToArray,
   inputToIntArray,
   tests,
-  inputToString
+  inputToString,
+  isOdd
 };
