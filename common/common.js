@@ -48,15 +48,21 @@ const tests = (tests) => {
 
 const inputToString = (filename) => {
   return returnInput(filename);
+};
+
+function isOdd(num) {
+  return num % 2;
 }
 
-function isOdd(num) { return num % 2;}
-
+const findManhattanDistance = (p1, p2) => {
+  return Math.abs(p1.x - p2.x) + Math.abs(p1.y - p2.y);
+};
 
 module.exports = {
   inputToArray,
   inputToIntArray,
   tests,
   inputToString,
-  isOdd
+  isOdd,
+  findManhattanDistance
 };
