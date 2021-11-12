@@ -15,7 +15,7 @@ const getCoords = (string) => {
 
 const generateGrid = (maxX, maxY) => {
   // generate a array of arrays using the max X and Y
-  const grid = [];
+  let grid = [];
   for (let y = 0; y <= maxY; y++) {
     grid[y] = [];
     for (let x = 0; x <= maxX; x++) {
@@ -25,7 +25,7 @@ const generateGrid = (maxX, maxY) => {
   return grid;
 };
 
-const findMaxCoordsInArray = (arr) => {
+const findMaxCoordsInArray = (input) => {
   // find the max X and Y on a array of coords
   let maxX = 0,
     maxY = 0;
@@ -124,7 +124,7 @@ const part2 = (input) => {
     grid[y][x] = `${x}${y}`;
   });
 
-  // find the closest coords to each point
+  // sum all Manhattan distances to each input coord
   for (let _y = 0; _y < grid.length; _y++) {
     let row = grid[_y];
     for (let _x = 0; _x < row.length; _x++) {
