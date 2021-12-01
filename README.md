@@ -25,9 +25,12 @@
 
 # Events
 ## [2021](https://adventofcode.com/2021)
-> The first puzzles will unlock on December 1st at midnight EST (UTC-5). See you then!
-> 
-> In the meantime, you can still access past [Events](https://adventofcode.com/2021/events). 
+|                   Task                   | Part 1 | Part 2 | Date Completed |                                        View Code                                         |
+| :--------------------------------------: | :----: | :----: | :------------: | :--------------------------------------------------------------------------------------: |
+| [1](https://adventofcode.com/2021/day/1) | :star: | :star: |   01/12/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%201) |
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
 
 ## [2020](https://adventofcode.com/2020)
 |                   Task                   | Part 1 | Part 2 | Date Completed |                                        View Code                                         |
