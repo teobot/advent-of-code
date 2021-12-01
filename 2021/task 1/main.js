@@ -7,13 +7,18 @@ const { inputToIntArray, tests } = require("../../common/common");
 
 const _REALinput = inputToIntArray("../2021/task 1/input.txt", "\n");
 
-const part1 = (input) => {
+const part1OLD = (input) => {
   // part 1
   let sum = 0; // sum of all numbers
   for (let i = 0; i < input.length; i++) {
     if (input[i] < input[i + 1]) sum++; // if current number is less than next number, add to sum
   }
   return sum; // return sum
+};
+
+const part1 = (_i) => {
+  // optimized part 1
+  return _i.filter((a, i) => a < _i[i + 1]).length;
 };
 
 const part2 = (input) => {
