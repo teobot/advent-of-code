@@ -23,7 +23,7 @@ const part1 = (_i) => {
 
 const part2 = (input) => {
   // part 2
-  let sum = -1; // sum of all numbers
+  let sum = -1; // sum of all numbers, its -1 because the first number is not included
   let prevGroup = 0; // previous group
   for (let i = 0; i < input.length; i++) {
     // if current number is less than next number, add to sum
