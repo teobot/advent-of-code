@@ -28,7 +28,7 @@
 |                   Task                   | Part 1 | Part 2 | Date Completed |                                        View Code                                         |
 | :--------------------------------------: | :----: | :----: | :------------: | :--------------------------------------------------------------------------------------: |
 | [1](https://adventofcode.com/2021/day/1) | :star: | :star: |   01/12/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%201) |
-
+| [2](https://adventofcode.com/2021/day/2) | :star: | :star: |   02/12/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%202) |
 <!-- ---------------------------------------------------------------------------------------- -->
 
 
