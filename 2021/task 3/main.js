@@ -32,7 +32,6 @@ const part2 = (input) => {
   // part 2
   let oxygen = findLastMolecule([...input], "1");
   let c02 = findLastMolecule([...input], "0");
-  
   return parseInt(oxygen, 2) * parseInt(c02, 2);
 };
 
@@ -44,18 +43,12 @@ const findLastMolecule = (input, molly) => {
     for (let x = 0; x < input.length; x++) {
       input[x][i] === "0" ? (zeroCount += 1) : (oneCount += 1);
     }
-    if (oneCount === zeroCount) {
+    if (oneCount === zeroCount || oneCount > zeroCount) {
+      // more ones then zeros or equal
       input = input.filter((x) => x[i] === molly);
     } else {
-      if (oneCount < zeroCount) {
         // more 0s than 1s
-        // remove all from input where the first character is 0
         input = input.filter((x) => x[i] === (molly === "0" ? "1" : "0"));
-      } else {
-        // more 1s than 0s
-        // remove all from input where the first character is 1
-        input = input.filter((x) => x[i] === molly);
-      }
     }
     if (input.length === 1) {
       // we found the only one left
