@@ -30,65 +30,41 @@ const part1 = (input) => {
 
 const part2 = (input) => {
   // part 2
-  let oxygen = "";
-  let c02 = "";
-
-  let oxygenInput = [...input];
-  let c02Input = [...input];
-
-  for (let i = 0; i < input[0].split("").length; i++) {
-    let zeroCount = 0;
-    let oneCount = 0;
-    for (let x = 0; x < oxygenInput.length; x++) {
-        oxygenInput[x][i] === "0" ? (zeroCount += 1) : (oneCount += 1);
-    }
-    if (oneCount === zeroCount) {
-      oxygenInput = oxygenInput.filter((x) => x[i] === "1");
-    } else {
-      if (oneCount < zeroCount) {
-        // more 0s than 1s
-        // remove all from input where the first character is 0
-        oxygenInput = oxygenInput.filter((x) => x[i] === "0");
-      } else {
-        // more 1s than 0s
-        // remove all from input where the first character is 1
-        oxygenInput = oxygenInput.filter((x) => x[i] === "1");
-      }
-    }
-    if (oxygenInput.length === 1) {
-      // we found the only one left
-      oxygen = oxygenInput[0];
-      break;
-    }
-  }
-
-  for (let i = 0; i < input[0].split("").length; i++) {
-    let zeroCount = 0;
-    let oneCount = 0;
-    for (let x = 0; x < c02Input.length; x++) {
-        c02Input[x][i] === "0" ? (zeroCount += 1) : (oneCount += 1);
-    }
-    if (oneCount === zeroCount) {
-        c02Input = c02Input.filter((x) => x[i] === "0");
-    } else {
-      if (oneCount < zeroCount) {
-        // more 0s than 1s
-        // remove all from input where the first character is 0
-        c02Input = c02Input.filter((x) => x[i] === "1");
-      } else {
-        // more 1s than 0s
-        // remove all from input where the first character is 1
-        c02Input = c02Input.filter((x) => x[i] === "0");
-      }
-    }
-    if (c02Input.length === 1) {
-      // we found the only one left
-      c02 = c02Input[0];
-      break;
-    }
-  }
+  let oxygen = findLastMolecule([...input], "1");
+  let c02 = findLastMolecule([...input], "0");
+  
   return parseInt(oxygen, 2) * parseInt(c02, 2);
 };
+
+const findLastMolecule = (input, molly) => {
+  let mol = ""
+  for (let i = 0; i < input[0].split("").length; i++) {
+    let zeroCount = 0;
+    let oneCount = 0;
+    for (let x = 0; x < input.length; x++) {
+      input[x][i] === "0" ? (zeroCount += 1) : (oneCount += 1);
+    }
+    if (oneCount === zeroCount) {
+      input = input.filter((x) => x[i] === molly);
+    } else {
+      if (oneCount < zeroCount) {
+        // more 0s than 1s
+        // remove all from input where the first character is 0
+        input = input.filter((x) => x[i] === (molly === "0" ? "1" : "0"));
+      } else {
+        // more 1s than 0s
+        // remove all from input where the first character is 1
+        input = input.filter((x) => x[i] === molly);
+      }
+    }
+    if (input.length === 1) {
+      // we found the only one left
+      mol = input[0];
+      break;
+    }
+  }
+  return mol
+}
 
 tests([
   {
