@@ -39,11 +39,10 @@ const findLastMolecule = (input, molly) => {
   let mol = ""
   for (let i = 0; i < input[0].split("").length; i++) {
     let zeroCount = 0;
-    let oneCount = 0;
     for (let x = 0; x < input.length; x++) {
-      input[x][i] === "0" ? (zeroCount += 1) : (oneCount += 1);
+      input[x][i] === "0" ? (zeroCount += 1) : (zeroCount -= 1);
     }
-    if (oneCount === zeroCount || oneCount > zeroCount) {
+    if (zeroCount <= 0) {
       // more ones then zeros or equal
       input = input.filter((x) => x[i] === molly);
     } else {
