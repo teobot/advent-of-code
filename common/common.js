@@ -64,5 +64,6 @@ module.exports = {
   tests,
   inputToString,
   isOdd,
-  findManhattanDistance
+  findManhattanDistance,
+  returnInput
 };
