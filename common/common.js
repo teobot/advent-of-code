@@ -13,9 +13,7 @@ const inputToArray = (filename, splitter) => {
 const inputToIntArray = (filename, split) => {
   return returnInput(filename)
     .split(split)
-    .map(function (item) {
-      return parseInt(item, 10);
-    });
+    .map(Number);
 };
 
 function calculatePercentage(part, total) {
