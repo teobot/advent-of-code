@@ -32,6 +32,20 @@ const getBoards = (input) => {
   return boards;
 };
 
+const ifBingoRow = (row) => {
+  return row.filter((rowNumber) => rowNumber !== "X").length === 0;
+};
+
+const ifBingoColumn = (board) => {
+  for (let index = 0; index < board[0].length; index++) {
+    let string = `${board[0][index]} ${board[1][index]} ${board[2][index]} ${board[3][index]} ${board[4][index]}`;
+    if (string === "X X X X X") {
+      return true;
+    }
+  }
+  return false;
+};
+
 const part1 = (input) => {
   // part 1
   const numbers = input.split("\n\n")[0].split(",").map(Number);
@@ -53,105 +67,67 @@ const part1 = (input) => {
         });
 
         // if row is gone then finished game
-        if (row.filter((rowNumber) => rowNumber !== "X").length === 0 && !fin) {
+        if ((ifBingoRow(row) || ifBingoColumn(board)) && !fin) {
           fin = true;
           winningBoard = board;
           lastCalledNumber = number;
         }
       });
-
-      if (!fin) {
-        for (let index = 0; index < board[0].length; index++) {
-          let string =
-            board[0][index] +
-            " " +
-            board[1][index] +
-            " " +
-            board[2][index] +
-            " " +
-            board[3][index] +
-            " " +
-            board[4][index];
-          if (string === "X X X X X") {
-            fin = true;
-            winningBoard = board;
-            lastCalledNumber = number;
-          }
-        }
-      }
     });
   });
 
-  let sum = sumAllInArray(winningBoard);
-
-  return sum * lastCalledNumber;
+  return sumAllInArray(winningBoard) * lastCalledNumber;
 };
 
 const part2 = (input) => {
   // part 2
   const numbers = input.split("\n\n")[0].split(",").map(Number);
 
-  let boards = getBoards(input);
+  let boards = getBoards(input).map((board) => {
+    return { card: board, completed: false, no: 0, num: 0 };
+  });
 
   let fin = false;
-  let lastBoard = null;
-  let lastCalledNumber = null;
-  let isLastBoard = false;
-  let hasLastBoardWon = false;
-  let result = 0;
-  let runOneLastTime = false;
+  let completedOrder = 0;
 
-  for (let i = 0; i < numbers.length; i++) {
-    const number = numbers[i];
-    for (let j = 0; j < boards.length; j++) {
-      const board = boards[j];
-      for (let k = 0; k < board.length; k++) {
-        const row = board[k];
-        for (let l = 0; l < row.length; l++) {
-          const rowNumber = row[l];
-          if (rowNumber === number) {
+  numbers.forEach((number) => {
+    boards.forEach((board) => {
+      board.card.forEach((row) => {
+        if(board.completed) return;
+        row.forEach((rowNumber, i) => {
+          if(board.completed) return;
+          if (rowNumber === number && !fin) {
             // remove it from the row
             row.splice(row.indexOf(rowNumber), 1, "X");
-
-            if (row.filter((rowNumber) => rowNumber !== "X").length === 0) {
-              // remove the board from the boards array
-              if (isLastBoard) {
-                // if the last board has been removed then we can stop
-                console.log('====================================');
-                console.log(boards[0]);
-                console.log(number);
-                console.log('====================================');
-                return 0
-              } else {
-                boards.splice(boards.indexOf(board), 1);
-              }
-            }
-
-            for (let index = 0; index < board[0].length; index++) {
-              let string = `${board[0][index]} ${board[1][index]} ${board[2][index]} ${board[3][index]} ${board[4][index]}`;
-              if (string === "X X X X X") {
-                if (isLastBoard) {
-                  // if it is not the last board
-                } else {
-                  boards.splice(boards.indexOf(board), 1);
-                }
-              }
-            }
           }
-        }
-      }
+          // if row is gone then finished game
+          if ((ifBingoRow(row) || ifBingoColumn(board.card)) && !fin) {
+            board.completed = true;
+            board.no = completedOrder;
+            board.num = number;
+            completedOrder++;
+            return;
+          }
+        });
+      });
+    });
+  });
 
-      if (boards.length === 1) {
-        // if the last board is gone
-        isLastBoard = true;
-      }
+  let losingBoard = null;
+  let no = 0;
+  boards.forEach((board) => {
+    if (board.no > no) {
+      no = board.no;
+      losingBoard = board;
     }
-  }
+  });
+
+  return sumAllInArray(losingBoard.card) * losingBoard.num;
 };
 
 tests([
   { f: part1, input: _TESTinput, expected: 4512 },
   { f: part1, input: _REALinput, expected: 45031 },
-  //{ f: part2, input: _REALinput, expected: 2568 },
   { f: part2, input: _TESTinput, expected: 1924 },
+  { f: part2, input: _REALinput, expected: 2568 },
 ]);
