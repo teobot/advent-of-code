@@ -105,6 +105,17 @@ const returnAllPointsBetweenTwoCoords = (coord1, coord2) => {
   return points;
 };
 
+const findMaxCoordsInArray = (input) => {
+  // find the max X and Y on a array of coords
+  let maxX = 0,
+    maxY = 0;
+  input.forEach(({x, y}) => {
+    if (x > maxX) maxX = x;
+    if (y > maxY) maxY = y;
+  });
+  return { maxX, maxY };
+};
+
 module.exports = {
   inputToArray,
   inputToIntArray,
@@ -114,5 +125,6 @@ module.exports = {
   findManhattanDistance,
   returnInput,
   generateGrid,
-  returnAllPointsBetweenTwoCoords
+  returnAllPointsBetweenTwoCoords,
+  findMaxCoordsInArray
 };
