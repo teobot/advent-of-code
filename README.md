@@ -41,6 +41,9 @@
 | [12](https://adventofcode.com/2021/day/12) |  :x:   |  :x:   |                | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%2012) |
 | [13](https://adventofcode.com/2021/day/13) | :star: | :star: |   13/12/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%2013) |
 | [14](https://adventofcode.com/2021/day/14) | :star: |  :x:   |   14/12/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%2014) |
+| [15](https://adventofcode.com/2021/day/15) |  :x:   |  :x:   |                | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%2015) |
+| [16](https://adventofcode.com/2021/day/16) |  :x:   |  :x:   |                | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%2016) |
+| [17](https://adventofcode.com/2021/day/17) | :star: | :star: |   17/12/2021   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2021/task%2017) |
 <!-- ---------------------------------------------------------------------------------------- -->
 
 
