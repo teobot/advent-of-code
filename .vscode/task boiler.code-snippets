@@ -36,7 +36,7 @@
       "\t//{ f: part1, input: _REALinput, expected: 0 },",
       "\t//{ f: part2, input: _TESTinput, expected: 0 },",
       "\t//{ f: part2, input: _REALinput, expected: 0 },",
-      "]);",
+      "]);"
     ],
     "description": "advent of code task boilerplate code"
   }
