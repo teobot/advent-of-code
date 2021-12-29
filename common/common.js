@@ -11,9 +11,7 @@ const inputToArray = (filename, splitter) => {
 };
 
 const inputToIntArray = (filename, split) => {
-  return returnInput(filename)
-    .split(split)
-    .map(Number);
+  return returnInput(filename).split(split).map(Number);
 };
 
 function calculatePercentage(part, total) {
@@ -25,17 +23,20 @@ const tests = (tests) => {
   let passedTests = 0;
   for (let i = 0; i < tests.length; i++) {
     const { f, input, expected } = tests[i];
-    let result = f(input);
-    let passedOrFail = result === expected;
-    console.log(chalk`
+    let toRun = tests[i].enabled !== undefined ? tests[i].enabled : true;
+    if (toRun) {
+      let result = f(input);
+      let passedOrFail = result === expected;
+      console.log(chalk`
       \tTest {underline #${i + 1}} {${
-      passedOrFail ? "green.bold passed" : "red.bold failed"
-    }}.
+        passedOrFail ? "green.bold passed" : "red.bold failed"
+      }}.
       \tExpected {green.bold ${expected}} ${
-      passedOrFail ? "and" : "but"
-    } got {${passedOrFail ? "green" : "red"}.bold ${result}}.
+        passedOrFail ? "and" : "but"
+      } got {${passedOrFail ? "green" : "red"}.bold ${result}}.
     `);
-    if (passedOrFail) passedTests++;
+      if (passedOrFail) passedTests++;
+    }
   }
   console.log(chalk`
     \tPassed {green.bold ${passedTests}} out of {red.bold ${
@@ -109,7 +110,7 @@ const findMaxCoordsInArray = (input) => {
   // find the max X and Y on a array of coords
   let maxX = 0,
     maxY = 0;
-  input.forEach(({x, y}) => {
+  input.forEach(({ x, y }) => {
     if (x > maxX) maxX = x;
     if (y > maxY) maxY = y;
   });
@@ -126,5 +127,5 @@ module.exports = {
   returnInput,
   generateGrid,
   returnAllPointsBetweenTwoCoords,
-  findMaxCoordsInArray
+  findMaxCoordsInArray,
 };
