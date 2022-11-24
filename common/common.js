@@ -117,6 +117,10 @@ const findMaxCoordsInArray = (input) => {
   return { maxX, maxY };
 };
 
+const test = (f, i, e) => {
+  return { f: f, input: i, expected: e }
+}
+
 module.exports = {
   inputToArray,
   inputToIntArray,
@@ -128,4 +132,5 @@ module.exports = {
   generateGrid,
   returnAllPointsBetweenTwoCoords,
   findMaxCoordsInArray,
+  test
 };
