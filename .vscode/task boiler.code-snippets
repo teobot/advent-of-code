@@ -12,7 +12,7 @@
       "// Advent of code ${1:year} -- Filename : $TM_FILENAME",
       "// Task link -- https://adventofcode.com/${1:Event Year}/day/${2:Task Number}",
       "// Github link -- https://github.com/teobot/advent-of-code/tree/main/$1/task%20$2",
-      "// Run Using -- node '.\\\\${1}\\task ${2}\\\\$TM_FILENAME'",
+      "// Run Using -- node './${1}/task ${2}/$TM_FILENAME'",
       "// Created by Theo Clapperton",
       "",
       "const { inputToArray, test, tests } = require(\"../../common/common\");",

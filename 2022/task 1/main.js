@@ -1,7 +1,7 @@
 // Advent of code 2022 -- Filename : main.js
 // Task link -- https://adventofcode.com/2022/day/1
 // Github link -- https://github.com/teobot/advent-of-code/tree/main/2022/task%201
-// Run Using -- node '.\2022\task 1\main.js'
+// Run Using -- node './2022/task 1/main.js'
 // Created by Theo Clapperton
 
 const { inputToArray, test, tests } = require("../../common/common");
