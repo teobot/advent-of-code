@@ -6,24 +6,44 @@
 
 const { inputToArray, test, tests } = require("../../common/common");
 
-const _REALinput = inputToArray("../2022/task 1/input.txt", "separator");
-const _TESTinput = inputToArray("../2022/task 1/test.txt", "separator");
+const _REALinput = inputToArray("../2022/task 1/input.txt", "\n\n");
+const _TESTinput = inputToArray("../2022/task 1/test.txt", "\r\n\r\n");
 
 const part1 = (input) => {
-    // part 1
-    
-    return 0;
-}
+  // part 1
+  let hc = 0;
+  input.forEach((elf) => {
+    let sum = elf
+      .split("\n")
+      .map(Number)
+      .reduce((a, b) => a + b);
+    if (sum > hc) hc = sum;
+  });
+  return hc;
+};
 
 const part2 = (input) => {
-    // part 2
-    
-    return 0;
-}
+  // part 2
+  let totals = [];
+  input.forEach((elf) => {
+    totals.push(
+      elf
+        .split("\n")
+        .map(Number)
+        .reduce((a, b) => a + b)
+    );
+  });
+
+  // order the totals by the highest and sum that first 3 together
+  return totals
+    .sort((a, b) => b - a)
+    .slice(0, 3)
+    .reduce((a, b) => a + b);
+};
 
 tests([
-    test(part1, _TESTinput, 0)
-    //test(part1, _REALinput, 0)
-    //test(part2, _TESTinput, 0)
-    //test(part2, _REALinput, 0)
+  test(part1, _TESTinput, 24000),
+  test(part1, _REALinput, 68292),
+  test(part2, _TESTinput, 45000),
+  test(part2, _REALinput, 203203),
 ]);

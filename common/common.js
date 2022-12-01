@@ -33,7 +33,7 @@ const tests = (tests) => {
       }}.
       \tExpected {green.bold ${expected}} ${
         passedOrFail ? "and" : "but"
-      } got {${passedOrFail ? "green" : "red"}.bold ${result}}.
+      } got {${passedOrFail ? "green" : "red"}.bold ${result}}
     `);
       if (passedOrFail) passedTests++;
     }
