@@ -33,6 +33,7 @@
 | [1](https://adventofcode.com/2022/day/1) | :star: | :star: |   01/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%201) |
 | [2](https://adventofcode.com/2022/day/2) | :star: | :star: |   02/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%202) |
 | [3](https://adventofcode.com/2022/day/3) | :star: | :star: |   03/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%203) |
+| [4](https://adventofcode.com/2022/day/4) | :star: | :star: |   04/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%204) |
 
 <!-- ---------------------------------------------------------------------------------------- -->
 
