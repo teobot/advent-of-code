@@ -28,7 +28,7 @@ const tests = (tests) => {
       let result = f(input);
       let passedOrFail = result === expected;
       console.log(chalk`
-      \tTest {underline #${i + 1}} {${
+      \tTest {underline #${i + 1}} :: ${f.name} :: {${
         passedOrFail ? "green.bold passed" : "red.bold failed"
       }}.
       \tExpected {green.bold ${expected}} ${
@@ -118,8 +118,11 @@ const findMaxCoordsInArray = (input) => {
 };
 
 const test = (f, i, e) => {
-  return { f: f, input: i, expected: e }
-}
+  return { f: f, input: i, expected: e };
+};
+
+const toFindDuplicates = (arry) =>
+  arry.filter((item, index) => arry.indexOf(item) !== index);
 
 module.exports = {
   inputToArray,
@@ -132,5 +135,6 @@ module.exports = {
   generateGrid,
   returnAllPointsBetweenTwoCoords,
   findMaxCoordsInArray,
-  test
+  test,
+  toFindDuplicates,
 };
