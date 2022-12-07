@@ -7,94 +7,153 @@
 
 const { inputToArray, test, tests } = require("../../common/common");
 
-const _REALinput = inputToArray("../2022/task 7/input.txt", "\n");
+const _REALinput = inputToArray("../2022/task 7/input.txt", "\r\n");
 const _TESTinput = inputToArray("../2022/task 7/test.txt", "\r\n");
 
 const part1 = (input) => {
   // part 1
-  let newDirectory = {};
-  let currentLocation = [];
-
-  newDirectory["/"] = {
-    files: [],
-    inside: null,
-  };
+  let directories = { "/": { parent: "", files: [], directories: [] } };
+  let currentDirectory = "";
 
   for (let i = 0; i < input.length; i++) {
-    const line = input[i].trim().split(" ");
-    let action = "nothing";
-
-    if (line[0] === "$") {
-      if (line[1] === "cd") {
-        if (line[2] === "..") {
-          // go up a directory
-          currentLocation.pop();
-          action = "go up a directory";
+    const section = input[i].split(" ");
+    if (section[0] === "$") {
+      if (section[1] === "cd") {
+        if (section[2] === "/") {
+          currentDirectory = "/";
+        } else if (section[2] === "..") {
+          let paths = currentDirectory.split("/");
+          currentDirectory = paths.slice(0, paths.length - 1).join("/");
         } else {
-          currentLocation.push(line[2]);
-          action = "go to a directory";
+          currentDirectory =
+            (currentDirectory == "/"
+              ? currentDirectory
+              : currentDirectory + "/") + section[2];
         }
       }
-    } else if (line[0] === "ls") {
-    } else if (line[0] === "dir") {
-      let newDirectoryName = line[1];
-      newDirectory[newDirectoryName] = {
-        files: [],
-        inside: currentLocation[currentLocation.length - 1],
-      };
-      action = "create a directory";
     } else {
-      // if the line is a number followed by a space and then a letter
-      // add the file to the current directory
-      action = "add a file";
-      newDirectory[currentLocation[currentLocation.length - 1]].files = [
-        ...newDirectory[currentLocation[currentLocation.length - 1]].files,
-        parseInt(line[0]),
-      ];
+      // not a $ command
+      if (section[0] === "dir") {
+        let newDirectory =
+          (currentDirectory == "/"
+            ? currentDirectory
+            : currentDirectory + "/") + section[1];
+        directories[newDirectory] = {
+          parent: currentDirectory,
+          files: [],
+          directories: [],
+        };
+
+        directories[currentDirectory].directories.push(newDirectory);
+      } else {
+        directories[currentDirectory].files.push({
+          file: section[1],
+          fileSize: parseInt(section[0]),
+        });
+      }
     }
   }
 
-  // go through the newDirectory and add up the files in each directory and its subdirectories
-  let total = {};
-  console.log(newDirectory);
+  const recursiveSum = (directory) => {
+    return (
+      directories[directory].files.reduce(
+        (acc, file) => acc + file.fileSize,
+        0
+      ) +
+      directories[directory].directories.reduce(
+        (acc, child) => acc + recursiveSum(child),
+        0
+      )
+    );
+  };
 
-  for (let i = 0; i < Object.keys(newDirectory).length; i++) {
-    const key = Object.keys(newDirectory)[i];
-    const directory = newDirectory[key];
-    let inside = directory.inside;
-    let filesSum = directory.files.reduce((a, b) => a + b, 0);
-
-    if (inside) {
-      newDirectory[inside].sum += filesSum;
-      total[key] = filesSum;
-    }
-  }
-
-  let totalArray = [];
-  for (let i = 0; i < Object.keys(newDirectory).length; i++) {
-    const key = Object.keys(newDirectory)[i];
-    const directory = newDirectory[key];
-    let filesSum = directory.files.reduce((a, b) => a + b, 0);
-    totalArray.push({
-      name: key,
-      sum: filesSum + directory.sum,
-    });
-  }
-
-  return totalArray
-    .filter((a) => a.sum <= 100000)
-    .reduce((a, b) => a + b.sum, 0);
+  return Object.keys(directories).reduce((acc, key) => {
+    let total = recursiveSum(key);
+    if (total <= 100000) acc += total;
+    return acc;
+  }, 0);
 };
 
 const part2 = (input) => {
   // part 2
+  let diskSpace = 70000000;
+  let unusedSpace = 30000000;
+  let directories = { "/": { parent: "", files: [], directories: [] } };
+  let currentDirectory = "";
 
-  return 0;
+  for (let i = 0; i < input.length; i++) {
+    const section = input[i].split(" ");
+    if (section[0] === "$") {
+      if (section[1] === "cd") {
+        if (section[2] === "/") {
+          currentDirectory = "/";
+        } else if (section[2] === "..") {
+          let paths = currentDirectory.split("/");
+          currentDirectory = paths.slice(0, paths.length - 1).join("/");
+        } else {
+          currentDirectory =
+            (currentDirectory == "/"
+              ? currentDirectory
+              : currentDirectory + "/") + section[2];
+        }
+      }
+    } else {
+      // not a $ command
+      if (section[0] === "dir") {
+        let newDirectory =
+          (currentDirectory == "/"
+            ? currentDirectory
+            : currentDirectory + "/") + section[1];
+        directories[newDirectory] = {
+          parent: currentDirectory,
+          files: [],
+          directories: [],
+        };
+
+        directories[currentDirectory].directories.push(newDirectory);
+      } else {
+        directories[currentDirectory].files.push({
+          file: section[1],
+          fileSize: parseInt(section[0]),
+        });
+      }
+    }
+  }
+
+  const recursiveSum = (directory) => {
+    return (
+      directories[directory].files.reduce(
+        (acc, file) => acc + file.fileSize,
+        0
+      ) +
+      directories[directory].directories.reduce(
+        (acc, child) => acc + recursiveSum(child),
+        0
+      )
+    );
+  };
+
+  let usedSpace = unusedSpace - (diskSpace - recursiveSum("/"));
+
+  let allSizes = [];
+  for (let i = 0; i < Object.keys(directories).length; i++) {
+    let directory = Object.keys(directories)[i];
+    allSizes.push(recursiveSum(directory));
+  }
+
+  return allSizes.reduce((lowest, size) => {
+    if (size >= usedSpace) {
+      if (size < lowest) {
+        lowest = size;
+      }
+    }
+    return lowest;
+  });
 };
 
 tests([
   test(part1, _TESTinput, 95437),
-  //test(part1, _REALinput, 1778099),
-  //test(part2, _TESTinput, 0)
-  //test(part2, _REALinput, 1623571)
+  test(part1, _REALinput, 1778099),
+  test(part2, _TESTinput, 24933642),
+  test(part2, _REALinput, 1623571),
 ]);
