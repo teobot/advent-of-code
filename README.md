@@ -28,17 +28,18 @@
 
 ## [2022](https://adventofcode.com/2022)
 
-|                   Task                   | Part 1 | Part 2 | Date Completed |                                        View Code                                         |
-| :--------------------------------------: | :----: | :----: | :------------: | :--------------------------------------------------------------------------------------: |
-| [1](https://adventofcode.com/2022/day/1) | :star: | :star: |   01/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%201) |
-| [2](https://adventofcode.com/2022/day/2) | :star: | :star: |   02/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%202) |
-| [3](https://adventofcode.com/2022/day/3) | :star: | :star: |   03/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%203) |
-| [4](https://adventofcode.com/2022/day/4) | :star: | :star: |   04/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%204) |
-| [5](https://adventofcode.com/2022/day/5) | :star: | :star: |   05/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%205) |
-| [6](https://adventofcode.com/2022/day/6) | :star: | :star: |   06/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%206) |
-| [7](https://adventofcode.com/2022/day/7) | :star: | :star: |   07/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%207) |
-| [8](https://adventofcode.com/2022/day/8) | :star: | :star: |   08/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%208) |
-| [9](https://adventofcode.com/2022/day/9) | :star: | :star: |   09/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%209) |
+|                    Task                    | Part 1 | Part 2 | Date Completed |                                         View Code                                         |
+| :----------------------------------------: | :----: | :----: | :------------: | :---------------------------------------------------------------------------------------: |
+|  [1](https://adventofcode.com/2022/day/1)  | :star: | :star: |   01/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%201)  |
+|  [2](https://adventofcode.com/2022/day/2)  | :star: | :star: |   02/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%202)  |
+|  [3](https://adventofcode.com/2022/day/3)  | :star: | :star: |   03/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%203)  |
+|  [4](https://adventofcode.com/2022/day/4)  | :star: | :star: |   04/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%204)  |
+|  [5](https://adventofcode.com/2022/day/5)  | :star: | :star: |   05/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%205)  |
+|  [6](https://adventofcode.com/2022/day/6)  | :star: | :star: |   06/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%206)  |
+|  [7](https://adventofcode.com/2022/day/7)  | :star: | :star: |   07/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%207)  |
+|  [8](https://adventofcode.com/2022/day/8)  | :star: | :star: |   08/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%208)  |
+|  [9](https://adventofcode.com/2022/day/9)  | :star: | :star: |   09/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%209)  |
+| [10](https://adventofcode.com/2022/day/10) | :star: |  :x:   |   13/12/2022   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2022/task%2010) |
 
 <!-- ---------------------------------------------------------------------------------------- -->
 
