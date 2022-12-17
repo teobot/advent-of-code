@@ -39,61 +39,61 @@ const part1 = (input) => {
   return total;
 };
 
-let crtGrid = [
-  "........................................",
-  "........................................",
-  "........................................",
-  "........................................",
-  "........................................",
-  "........................................",
-].map((row) => row.split(""));
-
 const part2 = (input) => {
   // part 2
-
-  let counter = 1;
-  let commands = input
-    .map((command) => {
-      let ii = command === "noop" ? counter++ : (counter += 2);
-      return {
-        com: command,
-        ind: ii,
-        val: parseInt(command.split(" ")[1]),
-      };
-    })
-    .filter((command) => command.com !== "noop");
-
-  let nthCycle = 40;
+  let x = 1;
+  let cycle = 0;
   let row = 0;
   let column = 0;
-  let x = 1;
+  let grid = [];
 
-  for (let i = 1; i < 241; i++) {
-    let movement = commands.find((command) => command.ind === i);
-    if (movement) {
-      x += movement.val;
+  for (let i = 0; i < input.length; i++) {
+    const [instruction, value] = input[i].split(" ");
+    cycle++;
+    if (!grid[row]) {
+      grid[row] = [];
     }
-    if (i > nthCycle) {
-      nthCycle += 40;
+    grid[row][column] = getChar(column, x);
+    if (column === 39) {
+      // end of the row go to next row
       row++;
-      x = 1;
       column = 0;
+    } else {
+      column++;
     }
-
-    if (column === x - 1 || column === x || column === x + 1)
-      crtGrid[row][column] = "#";
-
-    column++;
+    if (instruction === "addx") {
+      cycle++;
+      if (!grid[row]) {
+        grid[row] = [];
+      }
+      grid[row][column] = getChar(column, x);
+      if (column === 39) {
+        // end of the row go to next row
+        row++;
+        column = 0;
+      } else {
+        column++;
+      }
+      x += parseInt(value);
+    }
   }
 
-  crtGrid.forEach((row) => console.log(row.join("")));
+  grid.forEach((row) => console.log(row.join("")));
 
   return 0;
+};
+
+const getChar = (col, x) => {
+  if (col === x - 1 || col === x || col === x + 1) {
+    return "#";
+  } else {
+    return ".";
+  }
 };
 
 tests([
   //test(part1, _TESTinput, 13140),
   //test(part1, _REALinput, 13480),
   //test(part2, _TESTinput, 0),
-  test(part2, _REALinput, 0)
+  test(part2, _REALinput, 0),
 ]);
