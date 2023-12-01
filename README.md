@@ -15,6 +15,7 @@
 ## Table of Contents
 
 - [Events](#events)
+  - [2023](#2023)
   - [2022](#2022)
   - [2021](#2021)
   - [2020](#2020)
@@ -25,6 +26,12 @@
   - [2015](#2015)
 
 # Events
+
+## [2023](https://adventofcode.com/2023)
+
+|                   Task                   | Part 1 | Part 2 | Date Completed |                                        View Code                                         |
+| :--------------------------------------: | :----: | :----: | :------------: | :--------------------------------------------------------------------------------------: |
+| [1](https://adventofcode.com/2023/day/1) | :star: | :star: |   01/12/2023   | [View Code :question:](https://github.com/teobot/advent-of-code/tree/main/2023/task%201) |
 
 ## [2022](https://adventofcode.com/2022)
 
