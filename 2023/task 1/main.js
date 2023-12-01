@@ -23,68 +23,33 @@ const part1 = (input) => {
 };
 
 const part2 = (input) => {
-  // part 2 // TODO FIX THIS ITS GIVING 53346 WHICH IS LOW SHOULD BE 53348
+  // part 2
 
-  input = input.map((word) => {
-    // remove all digits
-    // 53346 is low
+  const digits = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
 
-    const ar = [
-      {
-        word: "one",
-        number: "1",
-      },
-      {
-        word: "two",
-        number: "2",
-      },
-      {
-        word: "three",
-        number: "3",
-      },
-      {
-        word: "four",
-        number: "4",
-      },
-      {
-        word: "five",
-        number: "5",
-      },
-      {
-        word: "six",
-        number: "6",
-      },
-      {
-        word: "seven",
-        number: "7",
-      },
-      {
-        word: "eight",
-        number: "8",
-      },
-      {
-        word: "nine",
-        number: "9",
-      },
-    ];
-
-    ar.map((x) => {
-      return {
-        ...x,
-        indexOf: word.indexOf(x.word),
-      };
-    })
-      .sort((a, b) => a.indexOf - b.indexOf)
-      .forEach((x) => {
-        if (x.indexOf !== -1) {
-          word = word.replace(x.word, x.number);
-        }
-      });
-
-    return word;
-  });
-
-  return part1(input);
+  return part1(
+    input
+      .map((line) =>
+        [
+          ...line.matchAll(
+            /(?=(\d|one|two|three|four|five|six|seven|eight|nine))/g
+          ),
+        ]
+          .map((match) => match[1])
+          .map((n) => parseInt(n) || digits.indexOf(n) + 1)
+      )
+      .map((line) => line.join(""))
+  );
 };
 
 tests([
