@@ -43,6 +43,9 @@ const part2 = (input) => {
   input = input.map((game) => {
     const [winningNumbers, numbers] = game.split(" | ");
     return {
+      cardId: parseInt(
+        winningNumbers.split(": ")[0].replaceAll(" ", "").split("Card")[1]
+      ),
       winningNumbers: winningNumbers.split(": ")[1].match(/\d+/g).map(Number),
       numbers: numbers.match(/\d+/g).map(Number),
     };
@@ -65,28 +68,52 @@ const part2 = (input) => {
 
   input.forEach((game) => {
     const { winningNumbers, numbers } = game;
+    let numberOfWins = 1;
     winningNumbers.forEach((number, index) => {
       if (numbers.includes(number)) {
-        game.cards = game.cards ? game.cards.concat([index]) : [index];
+        game.cards = game.cards
+          ? game.cards.concat([game.cardId + numberOfWins])
+          : [game.cardId + numberOfWins];
+        numberOfWins++;
       }
     });
   });
 
-  input = input.filter((game) => game.cards);
+  let newArray = [...input];
+  let counts = {};
 
-  console.log(input);
+  // timer
+  let start = new Date();
 
-  let tally = 0;
-  input.forEach((game) => {
-    const { cards } = game;
-  });
+  while (newArray.length > 0) {
+    const card = newArray.shift();
 
-  return tally;
+    if (!card) break;
+
+    counts[card.cardId] = counts[card.cardId] ? counts[card.cardId] + 1 : 1;
+    if (card.cards) {
+      card.cards.forEach((CCCard) => {
+        const GGGame = input.find((findGame) => findGame.cardId === CCCard);
+        if (GGGame) {
+          newArray.push(GGGame);
+        }
+      });
+    }
+
+    // console.log the time
+    if (new Date() - start > 1000) {
+      console.count("Still going...");
+      start = new Date();
+    }
+  }
+
+  // sum the values
+  return Object.values(counts).reduce((acc, val) => acc + val, 0);
 };
 
 tests([
   test(part1, _TESTinput, 13),
   test(part1, _REALinput, 21213),
   test(part2, _TESTinput, 30),
-  //test(part2, _REALinput, 0)
+  //test(part2, _REALinput, 0),
 ]);
